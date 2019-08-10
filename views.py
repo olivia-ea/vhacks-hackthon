@@ -9,3 +9,9 @@ from jinja2 import StrictUndefined
 app = Flask(__name__)
 app.jinja_env.undefinded = StrictUndefined
 app.debug = True
+
+@app.route('/')
+def index():
+    """ Homepage """
+
+    return render_template('homepage.html')
